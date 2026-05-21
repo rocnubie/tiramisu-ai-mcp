@@ -1,0 +1,24 @@
+{
+  "name": "msa-tiramisu-ai-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for Tiramisu AI — canonical website knowledge for AI clients.",
+  "homepage": "https://tiramisuai.com",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "claude",
+    "cursor",
+    "windsurf",
+    "tiramisu-ai"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
