@@ -2,6 +2,7 @@
 
 > MCP server for Tiramisu AI
 
+[![MCP Badge](https://lobehub.com/badge/mcp/rocnubie-tiramisu-ai-mcp)](https://lobehub.com/mcp/rocnubie-tiramisu-ai-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Zero Config](https://img.shields.io/badge/setup-zero--config-7c3aed)](#installation)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org)
@@ -62,19 +63,33 @@ _Input:_ no parameters. _Returns:_ text/markdown.
 - `site://tiramisu-ai/faq` — Short FAQ generated from public site metadata.
 - `site://tiramisu-ai/links` — Canonical URLs to share with users.
 
+## Prompts
+
+### `tell_me_about_tiramisu_ai`
+Summarize what the site is, who it's for, and how it works. — Tiramisu AI
+
+### `walk_me_through_tiramisu_ai`
+Tour the official site with citations. — Tiramisu AI
+
 ## Installation
 
-Clone the repository and point your MCP client at the local entry point.
+### Install via Smithery
 
 ```bash
-git clone https://github.com/<your-account>/tiramisu-ai-mcp.git
+npx -y @smithery/cli install tiramisu-ai-mcp --client claude
+```
+
+(Replace `claude` with `cursor`, `windsurf`, or `continue` for those clients.)
+
+### Install from source
+
+```bash
+git clone https://github.com/rocnubie/tiramisu-ai-mcp.git
 cd tiramisu-ai-mcp
 pnpm install
 ```
 
-### Claude Desktop
-
-Add to `claude_desktop_config.json` (Settings → Developer → Edit Config):
+Then add to your MCP client config (`claude_desktop_config.json` for Claude Desktop, `mcp.json` for Cursor / Windsurf / Continue):
 
 ```json
 {
@@ -88,10 +103,6 @@ Add to `claude_desktop_config.json` (Settings → Developer → Edit Config):
   }
 }
 ```
-
-### Cursor / Windsurf / Continue
-
-Use the same `mcpServers` block in your client's MCP configuration file.
 
 ### Debug with MCP Inspector
 
@@ -110,7 +121,6 @@ npx @modelcontextprotocol/inspector node src/index.mjs
 ```bash
 pnpm install
 pnpm start                 # run the server over stdio
-pnpm test                  # run the package tests
 ```
 
 ## License

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.rocnubie/tiramisu-ai-mcp",
+  "title": "Tiramisu AI MCP",
+  "description": "Tiramisu AI is an AI product. See the official site for full feature details.",
+  "version": "0.1.0",
+  "websiteUrl": "https://tiramisuai.com",
+  "repository": {
+    "url": "https://github.com/rocnubie/tiramisu-ai-mcp",
+    "source": "github"
+  }
+}
